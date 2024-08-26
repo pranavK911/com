@@ -29,7 +29,7 @@ nav {
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* More prominent shadow for better separation */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 nav .container {
@@ -48,17 +48,18 @@ nav .logo a {
 nav .nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
 }
 
 nav .nav-links li {
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 nav .nav-links a {
     color: #fff;
     text-decoration: none;
     font-size: 1em;
-    padding: 8px 15px;
+    padding: 10px 15px;
     transition: background 0.3s, color 0.3s;
 }
 
@@ -85,13 +86,9 @@ nav .nav-links a:hover {
 
 /* Responsive Design */
 @media(max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-
-    .nav-links {
+    nav .nav-links {
         position: absolute;
-        top: 70px;
+        top: 60px;
         left: -100%;
         flex-direction: column;
         background-color: #003366;
@@ -99,19 +96,23 @@ nav .nav-links a:hover {
         transition: left 0.3s ease;
     }
 
-    .nav-links li {
-        margin: 20px 0;
+    nav .nav-links li {
+        margin: 15px 0;
     }
 
-    .nav-links.show {
+    nav .nav-links.show {
         left: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
     }
 }
 
 /* Sections Styling */
 /* Base Section Styling */
 section {
-    padding: 80px 0;
+    padding: 80px 20px; /* Added padding for mobile screens */
     margin-top: 60px;
     text-align: center;
 }
@@ -120,9 +121,9 @@ section {
 #home {
     background: url('home-bg.jpg') no-repeat center center/cover;
     color: #fff;
-    padding: 200px 0; /* Increased padding for a more spacious feel */
+    padding: 200px 20px; /* Adjusted padding for better mobile responsiveness */
     position: relative;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced text shadow for better readability */
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,34 +131,34 @@ section {
 }
 
 #home h1 {
-    font-size: 4em; /* Larger font size for greater impact */
+    font-size: 3em; /* Adjusted font size for mobile devices */
     margin-bottom: 20px;
     font-weight: 700;
-    line-height: 1.2; /* Improved line height for better readability */
-    max-width: 80%; /* Limit width for better text alignment */
+    line-height: 1.2;
+    max-width: 90%;
 }
 
 #home p {
-    font-size: 1.5em; /* Slightly larger font size for emphasis */
+    font-size: 1.2em; /* Adjusted font size for mobile devices */
     margin-bottom: 30px;
-    max-width: 70%; /* Limit width for better readability */
+    max-width: 90%;
 }
 
 #home .btn {
-    padding: 15px 40px; /* Larger padding for a more prominent button */
-    background-color: #0066cc; /* Medium Blue */
+    padding: 12px 30px; /* Adjusted padding for mobile devices */
+    background-color: #0066cc;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px; /* Rounded corners for a modern look */
-    font-size: 1.1em; /* Adjust font size for better balance */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Added box-shadow transition for a smooth effect */
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 #home .btn:hover {
-    background-color: #004d99; /* Darker blue on hover for a clearer effect */
+    background-color: #004d99;
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover for a more interactive feel */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Services Section */
@@ -166,7 +167,7 @@ section {
 }
 
 #services h1 {
-    color: #003366; /* Dark Blue */
+    color: #003366;
     margin-bottom: 50px;
     font-weight: 700;
 }
@@ -179,9 +180,9 @@ section {
 
 .service-box {
     background: #ffffff;
-    padding: 25px;
+    padding: 20px;
     border: 1px solid #e1e5e8;
-    width: 30%;
+    width: calc(33.333% - 20px); /* Adjusted for margin spacing */
     margin-bottom: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -194,24 +195,24 @@ section {
 }
 
 .service-box h2 {
-    font-size: 1.5em;
+    font-size: 1.4em; /* Adjusted font size for mobile devices */
     margin-bottom: 15px;
-    color: #003366; /* Dark Blue */
+    color: #003366;
 }
 
 .service-box p {
-    font-size: 1.1em;
+    font-size: 1em; /* Adjusted font size for mobile devices */
     color: #555;
 }
 
 /* Portfolio Section */
 #portfolio {
     background-color: #f7f9fc;
-    padding: 80px 0; /* Padding added for consistency */
+    padding: 80px 20px; /* Adjusted padding for mobile screens */
 }
 
 #portfolio h1 {
-    color: #003366; /* Dark Blue */
+    color: #003366;
     margin-bottom: 50px;
     font-weight: 700;
 }
@@ -223,7 +224,7 @@ section {
 }
 
 .project {
-    width: 30%;
+    width: calc(33.333% - 20px); /* Adjusted for margin spacing */
     margin-bottom: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -244,7 +245,7 @@ section {
 .project h2 {
     padding: 15px;
     font-size: 1.4em;
-    background-color: #00509e; /* Medium Blue */
+    background-color: #00509e;
     color: #fff;
     margin: 0;
 }
@@ -257,31 +258,32 @@ section {
 /* About Us Section */
 #about {
     background-color: #ffffff;
-    padding: 80px 0;
+    padding: 80px 20px;
 }
 
 #about p {
-    width: 80%;
+    width: 90%;
     margin: auto;
     color: #666;
-    font-size: 1.2em;
+    font-size: 1.1em; /* Adjusted font size for mobile devices */
     line-height: 1.8;
 }
 
 /* Contact Us Section */
 #contact {
-    background-color: #003366; /* Dark Blue */
+    background-color: #003366;
     color: #fff;
-    padding: 80px 0;
+    padding: 80px 20px;
 }
 
 #contact p {
-    font-size: 1.3em;
+    font-size: 1.2em; /* Adjusted font size for mobile devices */
     margin-bottom: 30px;
 }
 
 #contact form {
-    width: 60%;
+    width: 100%;
+    max-width: 600px; /* Adjusted width for better mobile layout */
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -294,12 +296,12 @@ section {
     border-radius: 8px;
     background-color: #fff;
     color: #333;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 #contact button {
     padding: 15px;
-    background-color: #00509e; /* Medium Blue */
+    background-color: #00509e;
     color: #fff;
     border: none;
     border-radius: 30px;
@@ -308,6 +310,6 @@ section {
 }
 
 #contact button:hover {
-    background-color: #003366; /* Dark Blue */
+    background-color: #003366;
     transform: scale(1.05);
 }
