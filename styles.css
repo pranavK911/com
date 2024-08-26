@@ -1,0 +1,313 @@
+/* Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #003366; /* Dark Blue */
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* More prominent shadow for better separation */
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo a {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin: 0 20px;
+}
+
+nav .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 8px 15px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav .nav-links a:hover {
+    background-color: #00509e; /* Medium Blue */
+    border-radius: 30px;
+    color: #fff;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: transform 0.3s;
+}
+
+/* Responsive Design */
+@media(max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        flex-direction: column;
+        background-color: #003366;
+        width: 100%;
+        transition: left 0.3s ease;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links.show {
+        left: 0;
+    }
+}
+
+/* Sections Styling */
+/* Base Section Styling */
+section {
+    padding: 80px 0;
+    margin-top: 60px;
+    text-align: center;
+}
+
+/* Home Section */
+#home {
+    background: url('home-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 200px 0; /* Increased padding for a more spacious feel */
+    position: relative;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced text shadow for better readability */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home h1 {
+    font-size: 4em; /* Larger font size for greater impact */
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2; /* Improved line height for better readability */
+    max-width: 80%; /* Limit width for better text alignment */
+}
+
+#home p {
+    font-size: 1.5em; /* Slightly larger font size for emphasis */
+    margin-bottom: 30px;
+    max-width: 70%; /* Limit width for better readability */
+}
+
+#home .btn {
+    padding: 15px 40px; /* Larger padding for a more prominent button */
+    background-color: #0066cc; /* Medium Blue */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners for a modern look */
+    font-size: 1.1em; /* Adjust font size for better balance */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Added box-shadow transition for a smooth effect */
+}
+
+#home .btn:hover {
+    background-color: #004d99; /* Darker blue on hover for a clearer effect */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover for a more interactive feel */
+}
+
+/* Services Section */
+#services {
+    background-color: #ffffff;
+}
+
+#services h1 {
+    color: #003366; /* Dark Blue */
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.service-boxes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.service-box {
+    background: #ffffff;
+    padding: 25px;
+    border: 1px solid #e1e5e8;
+    width: 30%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.service-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #003366; /* Dark Blue */
+}
+
+.service-box p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Portfolio Section */
+#portfolio {
+    background-color: #f7f9fc;
+    padding: 80px 0; /* Padding added for consistency */
+}
+
+#portfolio h1 {
+    color: #003366; /* Dark Blue */
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 30%;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+.project h2 {
+    padding: 15px;
+    font-size: 1.4em;
+    background-color: #00509e; /* Medium Blue */
+    color: #fff;
+    margin: 0;
+}
+
+.project p {
+    padding: 15px;
+    color: #555;
+}
+
+/* About Us Section */
+#about {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+#about p {
+    width: 80%;
+    margin: auto;
+    color: #666;
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+/* Contact Us Section */
+#contact {
+    background-color: #003366; /* Dark Blue */
+    color: #fff;
+    padding: 80px 0;
+}
+
+#contact p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+#contact form {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact input, #contact textarea {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    font-size: 1.1em;
+}
+
+#contact button {
+    padding: 15px;
+    background-color: #00509e; /* Medium Blue */
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#contact button:hover {
+    background-color: #003366; /* Dark Blue */
+    transform: scale(1.05);
+}
